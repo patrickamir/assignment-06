@@ -1,0 +1,116 @@
+//
+//  main.cpp
+//  assignment 5
+//
+//  Created by Patrick Amirbehboody on 4/26/16.
+//  Copyright © 2016 Patrick Amirbehboody. All rights reserved.
+//  shape animation
+
+#include <iostream>
+#include <vector>
+#include <chrono>
+#include <cmath>
+#include <thread>
+
+
+using std :: cout;
+using std :: cin;
+using std :: endl;
+using std :: vector;
+
+// for terminal size
+
+const int TERM_SIZE_X = 80;
+const int TERM_SIZE_Y = 25;
+const int SIZE = TERM_SIZE_X * TERM_SIZE_Y;
+
+class Point {
+
+    float x;
+    float y;
+    
+public:
+    Point();
+    Point(float x = 0, float y = 0) {};
+    	double getX() const;
+    	double getY() const;
+    
+    
+};
+
+class shape : public Point {
+public:
+    /**
+     * A function to determine whether a shape contains a given point.
+     *
+     * Arguments:
+     * - `p`: The point we are considering.
+     *
+     * Returns:
+     * - `true` if the given point is inside the shape, `false`
+     *   otherwise.
+     */
+    virtual bool contains(const Point & p) const = 0;
+    virtual ~shape = default;
+    
+};
+
+class rectangle : public shape {
+protected:
+    float length;
+    float height;
+    
+public:
+   rectangle(double length, double height) : length(length), height(height){}
+    	virtual ~rectangle() = default;
+};
+
+class ellipse : public shape {
+    
+public:
+    	ellipse int (frames){
+        		float x, y;
+        		int radius = 5;
+        	}
+};
+
+class square :public rectangle {
+public:
+    square int (frames);
+    
+    
+};
+class circle : public ellipse {
+public:
+    cirlce int (frames);
+    
+};
+
+Point::Point()
+{
+
+    x= 0;
+    y= 0;
+    
+}
+
+
+void draw(const vector<shape*> & v) {}
+int main(){
+    const int frameNum = 100;
+    
+    
+    
+    
+    
+    	vector<shape*> shapes = {  };
+    	draw(shapes);
+    	std::this_thread::sleep_for(std::chrono::milliseconds(frameNum));
+    
+    
+    	return 0;
+    
+
+
+
+
